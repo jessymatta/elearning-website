@@ -42,7 +42,7 @@ class AuthController extends Controller
     public function login(Request $request){
         $validator =Validator::make($request->all(),[
             'username'=>'required|string',
-            'password'=>'string|min:6'
+            'password'=>'required'
         ]);
 
         //if validation fails
