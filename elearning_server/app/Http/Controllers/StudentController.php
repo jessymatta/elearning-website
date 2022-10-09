@@ -25,7 +25,7 @@ class StudentController extends Controller
 
         return response()->json([
             "status" => "success",
-            "updated_user" => $updated_student
+            "updated_student" => $updated_student
         ], 200);
 
     }
