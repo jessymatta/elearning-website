@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Login from './pages/login/Login';
-import HomePage from './pages/homepage/HomePage';
+import AdminDashboard from './pages/admin/AdminDashboard';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
         {/* Route of the login page*/}
         <Route path="/login" element={<Login />}></Route>
         {/* Route for the homepage */}
-        <Route path="/" element={<HomePage />}></Route>
+        <Route path="/admin/dashboard" element={<AdminDashboard />}></Route>
       </Routes>
         {/* <Login /> */}
       </BrowserRouter>
