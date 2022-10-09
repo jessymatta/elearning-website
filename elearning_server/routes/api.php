@@ -34,6 +34,7 @@ Route::group(['prefix' => 'v0.1'], function () {
     //Students routes
     Route::group(['prefix' => 'student'], function () {
         Route::group(['middleware' => 'student.role'], function () {
+            Route::get('/all_courses', [CourseController::class, 'getAllCourses'])->name('all-courses');
         });
     });
 
