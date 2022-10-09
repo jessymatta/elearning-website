@@ -33,7 +33,7 @@ class AuthController extends Controller
         ]);
 
         return response()->json([
-            'message'=>'User successfully registered',
+            'message'=>'Admin successfully registered',
             'status'=>"success",
             'user'=>$user
         ], 201);
