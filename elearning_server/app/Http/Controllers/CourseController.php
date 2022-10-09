@@ -8,7 +8,7 @@ use App\Models\Course;
 
 class CourseController extends Controller
 {
-    //A function that will add a new course
+    //A method that will add a new course
     public function addCourse(Request $request)
     {
         $validator = Validator::make($request->all(), [
@@ -31,6 +31,16 @@ class CourseController extends Controller
             'status'=>"success",
             'course'=>$course
         ], 201);
+    }
+
+    //A method that will get all courses
+    public function getAllCourses()
+    {
+        $courses = Course::all();
+        return response()->json([
+            "status" => "success",
+            "courses" => $courses
+        ], 200);
     }
 
     
