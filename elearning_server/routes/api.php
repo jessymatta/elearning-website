@@ -10,9 +10,11 @@ Route::group(['prefix' => 'v0.1'], function () {
         Route::get('/homepage', [UserController::class, 'getHomepage'])->name('homepage');
         //TODO : authorize only admins and instructors to add students
         Route::post('/register_student', [AuthController::class, 'registerStudent'])->name('register-student');
+        //TODO : only authorize admins to register admins
+        Route::post('/register_admin', [AuthController::class, 'registerAdmin'])->name('register');
     });
     
 
-    Route::post('/register', [AuthController::class, 'register'])->name('register');
+
     Route::post('/login', [AuthController::class, 'login'])->name('login');
 });

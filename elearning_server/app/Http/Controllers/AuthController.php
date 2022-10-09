@@ -10,7 +10,7 @@ use App\Models\User;
 class AuthController extends Controller
 {
     //Register Method
-    public function register(Request $request)
+    public function registerAdmin(Request $request)
     {
         $validator = Validator::make($request->all(), [
             'name' => 'required',
