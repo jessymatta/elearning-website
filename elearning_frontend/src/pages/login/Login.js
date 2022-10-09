@@ -8,6 +8,8 @@ function Login() {
     const [user, setUser] = useState('');
     const [password, setPassword] = useState('');
     const [errMsg, setErrMsg] = useState(''); //Error we get back when we try to authenticate
+    // TODO this is when we authenticate
+    const [success, setSucess] = useState(false);
 
 
     useEffect(() => {
@@ -18,37 +20,55 @@ function Login() {
         setErrMsg('');
     }, [user, password])
 
+    const submitForm = async (e) => {
+        e.preventDefault(); console.log(user, password);
+        setUser('');
+        setPassword('');
+        setSucess(true);
+    }
+
+
+
 
 
     return (
-        <div className='login-page'>
-        <section>
-            <p red={errMsg} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
-            <h1>Login</h1>
-            <form >
-                {/* Username input */}
-                <label htmlFor="username">Username</label>
-                <input type="text" name="username" id="username" ref={userRef}
-                    onChange={(e) => {
-                        setUser(e.target.value)
-                    }} value={user}
-                    required
-                    placeholder='Enter your Username' />
+        <>
+            {success ? (
+                <div >
+                    <h1>You are logged in</h1>
+                    {/* Route to go to the corresponding page */}
+                </div>
+            ) : (
+                <div className='login-page'>
+                    <section>
+                        <p red={errMsg} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
+                        <h1>Login</h1>
+                        <form onSubmit={submitForm}>
+                            {/* Username input */}
+                            <label htmlFor="username">Username</label>
+                            <input type="text" name="username" id="username" ref={userRef}
+                                onChange={(e) => {
+                                    setUser(e.target.value)
+                                }} value={user}
+                                required
+                                placeholder='Enter your Username' />
 
-                {/* Password input */}
-                <label htmlFor="password">Password</label>
-                <input type="password" name="password" id="password"
-                    onChange={(e) => {
-                        setPassword(e.target.value)
-                    }} value={password}
-                    required
-                    placeholder='Enter your password' />
+                            {/* Password input */}
+                            <label htmlFor="password">Password</label>
+                            <input type="password" name="password" id="password"
+                                onChange={(e) => {
+                                    setPassword(e.target.value)
+                                }} value={password}
+                                required
+                                placeholder='Enter your password' />
 
-                    {/*Login button */}
-                    <button>Login</button>
-            </form>
-        </section>
-        </div>
+                            {/*Login button */}
+                            <button>Login</button>
+                        </form>
+                    </section>
+                </div>
+            )}
+        </>
     );
 }
 
