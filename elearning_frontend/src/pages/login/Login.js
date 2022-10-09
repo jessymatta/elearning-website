@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import "./login.css"
 function Login() {
 
     const userRef = useRef();
@@ -7,7 +8,7 @@ function Login() {
     const [user, setUser] = useState('');
     const [password, setPassword] = useState('');
     const [errMsg, setErrMsg] = useState(''); //Error we get back when we try to authenticate
-    
+
 
     useEffect(() => {
         userRef.current.focus();
@@ -20,9 +21,10 @@ function Login() {
 
 
     return (
+        <div className='login-page'>
         <section>
             <p red={errMsg} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
-            <h1>Sign In</h1>
+            <h1>Login</h1>
             <form >
                 {/* Username input */}
                 <label htmlFor="username">Username</label>
@@ -46,6 +48,7 @@ function Login() {
                     <button>Login</button>
             </form>
         </section>
+        </div>
     );
 }
 
