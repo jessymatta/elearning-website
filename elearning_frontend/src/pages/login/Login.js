@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import "./login.css"
+import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function Login() {
 
     const userRef = useRef();
@@ -34,8 +36,10 @@ function Login() {
     return (
         <>
             {success ? (
-                <div >
-                    <h1>You are logged in</h1>
+                <div class="success-login">
+                    <FontAwesomeIcon className="check-mark" icon={faCircleCheck} />
+                    <h1>Login Successful</h1>
+                    
                     {/* Route to go to the corresponding page */}
                 </div>
             ) : (
@@ -46,7 +50,7 @@ function Login() {
                         <form onSubmit={submitForm}>
                             {/* Username input */}
                             <label htmlFor="username">Username</label>
-                            <input type="text" name="username" id="username" ref={userRef}
+                            <input type="text" name="username" id="username" ref={userRef} autoComplete="off"
                                 onChange={(e) => {
                                     setUser(e.target.value)
                                 }} value={user}

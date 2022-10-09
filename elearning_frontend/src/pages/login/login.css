@@ -66,9 +66,27 @@ button {
     color: white;
     font-size: 20px;
     font-weight: 600;
-    border-radius: 0.5rem ;
+    border-radius: 0.5rem;
 }
 
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+/* Login success page */
+.check-mark {
+    color: #3FCC7E;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+.success-login {
+    margin:0 auto;
+    width:500px;
+    display: flex;
+    flex-direction: column;
+    background-color: #EAF4EF;
+    margin-top: 30vh;
+    align-items: center;
 }
