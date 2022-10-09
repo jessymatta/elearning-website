@@ -23,6 +23,7 @@ Route::group(['prefix' => 'v0.1'], function () {
     Route::group(['prefix' => 'instructor'], function () {
         Route::group(['middleware' => 'instructor.role'], function () {
             Route::post('/register_student', [AuthController::class, 'registerStudent'])->name('register-student');
+            Route::get('/all_students', [StudentController::class, 'getAllStudents'])->name('all-students');
         });
     });
 
