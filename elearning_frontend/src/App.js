@@ -1,9 +1,12 @@
+import React, { useState } from 'react';
+import Login from './pages/login/Login';
 
 function App() {
+
   return (
-    <div className="App">
-      
-    </div>
+    <main className='App'>
+      <Login />
+    </main>
   );
 }
 
