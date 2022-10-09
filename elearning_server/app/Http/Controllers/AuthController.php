@@ -9,7 +9,7 @@ use App\Models\User;
 
 class AuthController extends Controller
 {
-    //Register function
+    //Register Method
     public function register(Request $request)
     {
         $validator = Validator::make($request->all(), [
@@ -36,6 +36,24 @@ class AuthController extends Controller
             'status'=>"success",
             'user'=>$user
         ], 201);
+    }
+
+    // Login Method
+    public function login(Request $request){
+        $validator =Validator::make($request->all(),[
+            'username'=>'required|string',
+            'password'=>'string|min:6'
+        ]);
+
+        //if validation fails
+        if($validator->fails()){
+            return response()->json($validator->errors()->toJson(), 422);
+        }
+        //if user is not authorized
+        if(!$token=auth() -> attempt($validator->validated())){
+            return response()->json(['error'=>'Unauthorized'], 401);
+        }
+        return $this->createNewToken($token);
     }
 
     //A function that will create a new jwt token
