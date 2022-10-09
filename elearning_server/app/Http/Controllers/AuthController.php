@@ -9,6 +9,7 @@ use App\Models\User;
 
 class AuthController extends Controller
 {
+    //Register function
     public function register(Request $request)
     {
         $validator = Validator::make($request->all(), [
@@ -36,4 +37,15 @@ class AuthController extends Controller
             'user'=>$user
         ], 201);
     }
+
+    //A function that will create a new jwt token
+    public function createNewToken($token){
+        return response()->json([
+            'access_token'=>$token,
+            'token_type'=>'bearer',
+            'expires_in'=>auth()->factory()->getTTL()*60,
+            'user'=>auth()->user()
+        ]);
+    }
+
 }
