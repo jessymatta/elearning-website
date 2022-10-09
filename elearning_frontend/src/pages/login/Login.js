@@ -60,10 +60,10 @@ function Login() {
                         navigate('/admin/dashboard');
                         break;
                     case "instructor":
-                        // code block
+                        navigate('/instructor/dashboard');
                         break;
                     case "student":
-                        // code block
+                        navigate('');
                         break;
                 }
 
