@@ -43,5 +43,29 @@ class CourseController extends Controller
         ], 200);
     }
 
+    //A method that updates a course info
+    public function updateCourse(Request $request, $course_id)
+    {
+        $validator = Validator::make($request->all(), [
+            'crn' => 'string|unique:courses',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json($validator->errors()->toJson(), 400);
+        }
+        
+        $updated_course = Course::find($course_id);
+        $updated_course->name = $request->crn;
+        $updated_course->course_name = $request->course_name;
+        $updated_course->instructor = $request->instructor;
+
+        $updated_course->save();
+
+        return response()->json([
+            "status" => "success",
+            "updated_course" => $updated_course
+        ], 200);
+
+    }
     
 }
