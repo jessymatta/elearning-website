@@ -63,7 +63,7 @@ function Login() {
                         navigate('/instructor/dashboard');
                         break;
                     case "student":
-                        navigate('');
+                        navigate('/students/dashboard');
                         break;
                 }
 
