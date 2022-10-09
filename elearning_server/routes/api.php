@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\InstructorController;
+use App\Http\Controllers\CourseController;
 
 Route::group(['prefix' => 'v0.1'], function () {
 
@@ -16,6 +17,9 @@ Route::group(['prefix' => 'v0.1'], function () {
             Route::post('/register_student', [AuthController::class, 'registerStudent'])->name('register-student');
             Route::get('/all_students', [StudentController::class, 'getAllStudents'])->name('all-students');
             Route::get('/all_instructors', [InstructorController::class, 'getAllInstructors'])->name('all-instructors');
+            Route::post('/add_course', [CourseController::class, 'addCourse'])->name('add-course');
+            // Route::get('/all_courses', [CourseController::class, 'getAllInstructors'])->name('all-courses');
+
         });
     });
 
