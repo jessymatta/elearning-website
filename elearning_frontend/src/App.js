@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Login from './pages/login/Login';
 import AdminDashboard from './pages/admin/AdminDashboard';
 import InstructorDashboard from './pages/instructor/InstructorDashboard';
+import StudentDashboard from './pages/student/StudentDashboard';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -16,6 +17,8 @@ function App() {
         <Route path="/admin/dashboard" element={<AdminDashboard />}></Route>
         {/* Route for instructors dashboard */}
         <Route path="/instructor/dashboard" element={<InstructorDashboard />}></Route>
+        {/* Route for students dashboard */}
+        <Route path="/students/dashboard" element={<StudentDashboard />}></Route>
       </Routes>
         {/* <Login /> */}
       </BrowserRouter>
