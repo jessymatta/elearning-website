@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Course extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'crn',
+        'course_name',
+        'instructor',
+    ];
 }
