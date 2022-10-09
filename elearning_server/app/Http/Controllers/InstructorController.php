@@ -16,4 +16,19 @@ class InstructorController extends Controller
         ], 200);
     }
 
+    public function updateInstructor(Request $request, $instructor_id)
+    {
+        $updated_instructor = User::find($instructor_id);
+        $updated_instructor->name = $request->name;
+        $updated_instructor->email = $request->email;
+        $updated_instructor->save();
+
+        return response()->json([
+            "status" => "success",
+            "updated_instructor" => $updated_instructor
+        ], 200);
+
+    }
 }
+
+
