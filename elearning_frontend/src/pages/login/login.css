@@ -11,18 +11,15 @@ h1 {
     font-size: 35px;
 }
 
-body {
-    min-height: 100vh;
-    background-color: #EAF4EF;
-}
-
 .login-page {
+    border: 2px solid red;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     padding: 1rem 0.5rem;
+    background-color: #EAF4EF;
 }
 
 section {
@@ -86,7 +83,6 @@ input:-webkit-autofill {
     width:500px;
     display: flex;
     flex-direction: column;
-    background-color: #EAF4EF;
     margin-top: 30vh;
     align-items: center;
 }
