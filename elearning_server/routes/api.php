@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\StudentController;
 
 Route::group(['prefix' => 'v0.1'], function () {
 
@@ -12,6 +13,7 @@ Route::group(['prefix' => 'v0.1'], function () {
             Route::post('/register_admin', [AuthController::class, 'registerAdmin'])->name('register-admin');
             Route::post('/register_instructor', [AuthController::class, 'registerInstructor'])->name('register-instructor');
             Route::post('/register_student', [AuthController::class, 'registerStudent'])->name('register-student');
+            Route::get('/all_students', [StudentController::class, 'getAllStudents'])->name('all-students');
         });
     });
 
