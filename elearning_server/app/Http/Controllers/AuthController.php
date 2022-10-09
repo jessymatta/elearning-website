@@ -9,7 +9,7 @@ use App\Models\User;
 
 class AuthController extends Controller
 {
-    //Register Method
+    //Admin Registration Method
     public function registerAdmin(Request $request)
     {
         $validator = Validator::make($request->all(), [
@@ -35,7 +35,7 @@ class AuthController extends Controller
         return response()->json([
             'message'=>'Admin successfully registered',
             'status'=>"success",
-            'user'=>$user
+            'admin'=>$user
         ], 201);
     }
 
@@ -93,6 +93,36 @@ class AuthController extends Controller
             'message'=>'Student successfully registered',
             'status'=>"success",
             'student'=>$user
+        ], 201);
+    }
+
+    //A function that will add new Instructors
+    public function registerInstructor(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'name' => 'required',
+            'username' => 'required|string|unique:users',
+            'email' => 'required|string|email|unique:users',
+            'password' => 'required|string|confirmed|min:6',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json($validator->errors()->toJson(), 400);
+        }
+
+        $user = User::create([
+            'name' => $request->name,
+            "email" => $request->email,
+            "username" => $request->username,
+            "user_type"=> "instructor",
+            "password" => bcrypt($request->password)
+
+        ]);
+
+        return response()->json([
+            'message'=>'Instructor successfully registered',
+            'status'=>"success",
+            'instructor'=>$user
         ], 201);
     }
 
