@@ -21,6 +21,7 @@ Route::group(['prefix' => 'v0.1'], function () {
             Route::get('/all_courses', [CourseController::class, 'getAllCourses'])->name('all-courses');
             Route::post('/update_student/{student_id}', [StudentController::class, 'updateStudent'])->name('update-student');
             Route::post('/update_instructor/{instructor_id}', [InstructorController::class, 'updateInstructor'])->name('update-instructor');
+            Route::post('/update_course/{course_id}', [CourseController::class, 'updateCourse'])->name('update-course');
 
         });
     });
