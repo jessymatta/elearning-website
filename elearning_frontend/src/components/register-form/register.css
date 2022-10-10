@@ -18,6 +18,8 @@
     border-radius: 0.5rem;
     border:none;
     width:130px;
+    margin-top: 30px;
+    cursor: pointer;
 }
 
 .margin-left{
