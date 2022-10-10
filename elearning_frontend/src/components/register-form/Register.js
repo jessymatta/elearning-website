@@ -3,7 +3,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const Register = () => {
+const Register = ({api_path,route}) => {
 
     const token = localStorage.getItem('token');
     const [name, setName] = useState("");
@@ -26,10 +26,10 @@ const Register = () => {
         }
         data.append("password", password);
         data.append("password_confirmation", confirm_password);
-
+        // register_instructor
         await axios({
             method: "post",
-            url: "http://127.0.0.1:8000/api/v0.1/admin/register_instructor",
+            url: `http://127.0.0.1:8000/api/v0.1/admin/${api_path}`,
             data: data,
             headers: { Authorization: `Bearer${token}` },
         })
@@ -38,7 +38,7 @@ const Register = () => {
 
                 if (response.status === 201) {
                     console.log("successful whatever");
-                    navigate("/admin");
+                    navigate(`/${route}`);
                 }
 
             })

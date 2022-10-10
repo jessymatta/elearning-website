@@ -13,7 +13,7 @@ const AdminAddInstructor = () => {
                 
                 <div className="table-container">
                     <div className="table-title">Basic information</div>
-                    <Register />
+                    <Register api_path={"register_instructor"} route={"admin"}/>
                 </div>
                 <Footer/>
             </div> 
