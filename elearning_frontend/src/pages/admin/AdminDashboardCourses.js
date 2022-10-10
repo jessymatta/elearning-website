@@ -9,7 +9,7 @@ const AdminDashboardCourses = () => {
         <div class="admin-dash">
             <Sidebar/>
             <div className="dash-container">
-                <Title title={"Students List"}/>
+                <Title title={"Courses List"}/>
                 
                 <div className="table-container">
                     <div className="table-title">All Courses</div>
