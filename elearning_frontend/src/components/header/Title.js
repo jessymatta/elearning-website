@@ -1,11 +1,12 @@
 import "./title.css"
 
-const Title = () => {
+const Title = ({title}) => {
     return (
         <div className='title'>
-            ss
+            <h1 className="title-name">{title}</h1>
         </div>
     )
 }
-
 export default Title
+
+// Instructors Lis
