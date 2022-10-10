@@ -4,6 +4,7 @@ import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faUsers } from "@fortawesome/free-solid-svg-icons";
 import { faBook } from "@fortawesome/free-solid-svg-icons";
 import { faArrowRightFromBracket } from "@fortawesome/free-solid-svg-icons";
+import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
     return (
@@ -16,11 +17,15 @@ const Sidebar = () => {
             <div className='center'>
                 <ul>
                     <p class="nav-title"><FontAwesomeIcon className="sidebar-icon" icon={faUser}/>INSTRUCTORS</p>
-                    <li><span>All Instructors</span></li>
+                    <Link class="default-link" to="/admin/dashboard"><li><span>All Instructors</span></li></Link>
+                    
+                    
                     <li><span>Add Instructors</span></li>
-
+                    {/* /admin/dashboard/students */}
                     <p class="nav-title"><FontAwesomeIcon className="sidebar-icon" icon={faUsers}/>STUDENTS</p>
+                    <Link class="default-link" to="/admin/dashboard/students">
                     <li><span>All Students</span></li>
+                    </Link>
                     <li><span>Add Student</span></li>
 
                     <p class="nav-title"><FontAwesomeIcon className="sidebar-icon" icon={faBook}/>COURSES</p>

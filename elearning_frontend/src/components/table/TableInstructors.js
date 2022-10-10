@@ -2,29 +2,29 @@ import "./table.css";
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-const Table = () => {
+const TableInstructors = () => {
 
     const token = localStorage.getItem('token');
-    const [students, setStudents] = useState([]);
+    const [instructors, setInstructors] = useState([]);
 
     useEffect(() => {
-        const getStudents = async () => {
-            const student_from_server = await getStudentsAPI();
-            setStudents(student_from_server);
+        const getinstructors = async () => {
+            const student_from_server = await getinstructorsAPI();
+            setInstructors(student_from_server);
         }
-        getStudents();
+        getinstructors();
     }, []);
 
 
-    const getStudentsAPI = async () => {
+    const getinstructorsAPI = async () => {
         try {
 
             const results = await axios({
                 method: "get",
-                url: "http://127.0.0.1:8000/api/v0.1/admin/all_students",
+                url: "http://127.0.0.1:8000/api/v0.1/admin/all_instructors",
                 headers: { Authorization: `Bearer${token}` },
             });
-            const data = await results.data.students;
+            const data = await results.data.instructors;
             return data;
         } catch (error) {
             console.log(error);
@@ -33,7 +33,7 @@ const Table = () => {
 
     return (
         <div className='table'>
-            {/* <div>{JSON.stringify(students)}</div> */}
+            {/* <div>{JSON.stringify(instructors)}</div> */}
             <table>
                 <thead>
                     <tr>
@@ -45,7 +45,7 @@ const Table = () => {
                 </thead>
 
                 <tbody>
-                    {students.map((student) => (
+                    {instructors.map((student) => (
                         <tr>
                             <td>{student._id}</td>
                             <td>{student.name}</td>
@@ -59,4 +59,4 @@ const Table = () => {
     )
 }
 
-export default Table
+export default TableInstructors

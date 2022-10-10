@@ -80,3 +80,14 @@
 .bottom:hover, .btm-icon:hover{
     color: #3FCC7E;
 }
+
+.default-link{
+    text-decoration: none;
+    color: white;
+    width: fit-content;
+    height: fit-content;
+}
+
+.default-link:hover{
+    color:#3FCC7E;
+}

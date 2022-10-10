@@ -2,18 +2,18 @@ import Sidebar from "../../components/sidebar/Sidebar";
 import Title from "../../components/header/Title";
 import './admindash.css';
 import Footer from "../../components/footer/Footer";
-import Table from "../../components/table/Table";
+import TableStudents from "../../components/table/TableStudents";
 
-const AdminDashboard = () => {
+const AdminDashboardStudents = () => {
     return (
         <div class="admin-dash">
             <Sidebar/>
             <div className="dash-container">
-                <Title title={"Instructors List"}/>
+                <Title title={"Students List"}/>
                 
                 <div className="table-container">
                     <div className="table-title">All instructors</div>
-                    <Table/>
+                    <TableStudents/>
                 </div>
                 <Footer/>
             </div> 
@@ -21,4 +21,4 @@ const AdminDashboard = () => {
     )
 }
 
-export default AdminDashboard
+export default AdminDashboardStudents
