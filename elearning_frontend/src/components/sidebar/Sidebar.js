@@ -29,7 +29,9 @@ const Sidebar = () => {
                     </Link>
 
                     <p class="nav-title"><FontAwesomeIcon className="sidebar-icon" icon={faBook}/>COURSES</p>
+                    <Link class="default-link" to="/admin/courses">
                     <li><span>All Courses</span></li>
+                    </Link>
                     <li><span>Add Course</span></li>
                 </ul>
             </div>
