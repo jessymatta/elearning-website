@@ -6,6 +6,7 @@ import AdminDashboardInstructors from './pages/admin/AdminDashboardInstructors';
 import AdminDashboardStudents from './pages/admin/AdminDashboardStudents';
 import AdminAddInstructor from './pages/admin/AdminAddInstructor';
 import AdminAddStudent from './pages/admin/AdminAddStudent';
+import AdminDashboardCourses from './pages/admin/AdminDashboardCourses';
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
             <Route path="admin">
               <Route index element={<AdminDashboardInstructors />} />
               <Route path="students" element={<AdminDashboardStudents />} />
+              <Route path="courses" element={<AdminDashboardCourses />} />
               <Route path="add_instructor" element={<AdminAddInstructor/>} />
               <Route path="add_student" element={<AdminAddStudent/>} />
             </Route>
