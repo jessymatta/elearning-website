@@ -1,6 +1,10 @@
+import Sidebar from "../../components/sidebar/Sidebar";
+
 const AdminDashboard = () => {
     return (
-        <div>AdminDashBoardd</div>
+        <div>
+            <Sidebar/>
+        </div>
     )
 }
 
