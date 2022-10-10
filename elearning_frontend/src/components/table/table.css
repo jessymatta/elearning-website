@@ -25,3 +25,17 @@ th {
 td {
     background-color: #eeeeee;
 }
+
+.edit-icon{
+    margin-left:20px ;
+    margin-right:30px ;
+}
+
+.delete-icon, .edit-icon{
+    color: #808080;
+    cursor: pointer;
+}
+
+.delete-icon:hover, .edit-icon:hover{
+    color: #bbbaba;
+}

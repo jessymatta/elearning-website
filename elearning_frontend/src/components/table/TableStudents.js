@@ -1,6 +1,9 @@
 import "./table.css";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPen } from "@fortawesome/free-solid-svg-icons";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 const TableStudents = () => {
 
@@ -52,7 +55,7 @@ const TableStudents = () => {
                             <td>{student.name}</td>
                             <td>{student.email}</td>
                             <td>{(student.created_at).split('T')[0]}</td>
-                            <td></td>
+                            <td><FontAwesomeIcon className="edit-icon" icon={faPen}/><FontAwesomeIcon className="delete-icon gray" icon={faTrash}/></td>
                         </tr>
                     ))}
                 </tbody>
