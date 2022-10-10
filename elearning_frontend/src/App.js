@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AdminDashboardInstructors from './pages/admin/AdminDashboardInstructors';
 import AdminDashboardStudents from './pages/admin/AdminDashboardStudents';
 import AdminAddInstructor from './pages/admin/AdminAddInstructor';
+import AdminAddStudent from './pages/admin/AdminAddStudent';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
               <Route index element={<AdminDashboardInstructors />} />
               <Route path="students" element={<AdminDashboardStudents />} />
               <Route path="add_instructor" element={<AdminAddInstructor/>} />
+              <Route path="add_student" element={<AdminAddStudent/>} />
             </Route>
 
             <Route path="instructor">
