@@ -41,6 +41,7 @@ const TableStudents = () => {
                         <th>Name</th>
                         <th>Email</th>
                         <th>Admission Date</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
 
@@ -51,6 +52,7 @@ const TableStudents = () => {
                             <td>{student.name}</td>
                             <td>{student.email}</td>
                             <td>{(student.created_at).split('T')[0]}</td>
+                            <td></td>
                         </tr>
                     ))}
                 </tbody>
