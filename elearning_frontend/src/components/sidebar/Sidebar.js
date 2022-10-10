@@ -18,10 +18,8 @@ const Sidebar = () => {
                 <ul>
                     <p class="nav-title"><FontAwesomeIcon className="sidebar-icon" icon={faUser}/>INSTRUCTORS</p>
                     <Link class="default-link" to="/admin"><li><span>All Instructors</span></li></Link>
+                    <Link class="default-link" to="/admin/add_instructor"><li><span>Add Instructors</span></li></Link>
                     
-                    
-                    <li><span>Add Instructors</span></li>
-                    {/* /admin/dashboard/students */}
                     <p class="nav-title"><FontAwesomeIcon className="sidebar-icon" icon={faUsers}/>STUDENTS</p>
                     <Link class="default-link" to="/admin/students">
                     <li><span>All Students</span></li>

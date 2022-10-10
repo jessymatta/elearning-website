@@ -5,6 +5,7 @@ import StudentDashboard from './pages/student/StudentDashboard';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AdminDashboardInstructors from './pages/admin/AdminDashboardInstructors';
 import AdminDashboardStudents from './pages/admin/AdminDashboardStudents';
+import AdminAddInstructor from './pages/admin/AdminAddInstructor';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
             <Route path="admin">
               <Route index element={<AdminDashboardInstructors />} />
               <Route path="students" element={<AdminDashboardStudents />} />
+              <Route path="add_instructor" element={<AdminAddInstructor/>} />
             </Route>
 
             <Route path="instructor">
