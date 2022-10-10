@@ -9,7 +9,7 @@ const AdminAddStudent = () => {
         <div class="admin-dash">
             <Sidebar/>
             <div className="dash-container">
-                <Title title={"Add Instructor "}/>
+                <Title title={"Add Student"}/>
                 
                 <div className="table-container">
                     <div className="table-title">Basic information</div>
