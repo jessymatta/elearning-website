@@ -50,7 +50,7 @@ const TableStudents = () => {
 
                 <tbody>
                     {students.map((student) => (
-                        <tr>
+                        <tr key={student._id}>
                             <td>{student._id}</td>
                             <td>{student.name}</td>
                             <td>{student.email}</td>
