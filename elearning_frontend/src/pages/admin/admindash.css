@@ -8,3 +8,18 @@
     flex: 6;
     position: relative;
 }
+
+.table-container{
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.table-title{
+    color: gray;
+    font-weight: 500;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+

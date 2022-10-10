@@ -9,7 +9,10 @@ const AdminDashboard = () => {
             <Sidebar/>
             <div className="dash-container">
                 <Title title={"Instructors List"}/>
-                container
+                
+                <div className="table-container">
+                    <div className="table-title">All instructors</div>
+                </div>
                 <Footer/>
             </div> 
         </div>
