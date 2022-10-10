@@ -6,4 +6,5 @@
 .dash-container{
     background-color: #C7D3E5;
     flex: 6;
+    position: relative;
 }
