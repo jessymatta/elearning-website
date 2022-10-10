@@ -1,0 +1,32 @@
+.admin-sidebar {
+    background-color: blueviolet;
+    flex: 1;
+}
+
+.green{
+    color: #3FCC7E;
+}
+
+.top {
+    background-color:#222C3C;
+    color: white;
+    height:90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.role{
+    font-weight:normal;
+    margin-top: 10px;
+}
+
+.center {}
+
+.bottom {}

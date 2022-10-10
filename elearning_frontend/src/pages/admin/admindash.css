@@ -1,0 +1,9 @@
+.admin-dash{
+    display: flex;
+
+}
+
+.dash-container{
+    background-color: aqua;
+    flex: 6;
+}

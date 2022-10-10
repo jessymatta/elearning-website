@@ -1,10 +1,11 @@
 import Sidebar from "../../components/sidebar/Sidebar";
+import './admindash.css';
 
 const AdminDashboard = () => {
     return (
-        <div>
+        <div class="admin-dash">
             <Sidebar/>
-            <div className="dash-container"> This is the main page without the sidebar</div> 
+            <div className="dash-container">container</div> 
         </div>
     )
 }
