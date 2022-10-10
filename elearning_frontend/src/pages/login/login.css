@@ -45,7 +45,7 @@ section {
 
 input[type="text"],
 input[type="password"],
-input[type="date"] {
+input[type="date"],select {
     font-family: 'Nunito', sans-serif;
     font-size: 15px;
     padding: 0.25rem;
