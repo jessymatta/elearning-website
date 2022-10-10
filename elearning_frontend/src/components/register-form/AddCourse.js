@@ -1,35 +1,36 @@
 import "./register.css";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const AddCourse = ({api_path,route}) => {
+const AddCourse = () => {
 
     const token = localStorage.getItem('token');
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [username, setUsername] = useState("");
-    const [password, setPassword] = useState("");
-    const [confirm_password, setConfPassword] = useState("");
+    const [crn, setCRN] = useState("");
+    const [course_name, setCourseName] = useState("");
+    const [instructor, setInstructor] = useState("");
     const navigate = useNavigate();
+    const [instructors, setInstructors] = useState([]);
+
+    useEffect(() => {
+        const getinstructors = async () => {
+            const instructors_from_server = await getinstructorsAPI();
+            setInstructors(instructors_from_server);
+        }
+        getinstructors();
+    }, []);
 
     //When the submit button is clicked
-    const submitUser = async (e) => {
+    const submitCourse = async (e) => {
         e.preventDefault();
         let data = new FormData();
-        data.append("name", name);
-        data.append("username", username);
-        data.append("email", email);
-        if(password.length<6){
-            console.log("password should have at least 6 characters");
-            return;
-        }
-        data.append("password", password);
-        data.append("password_confirmation", confirm_password);
-        // register_instructor
+        data.append("crn", crn);
+        data.append("course_name", course_name);
+        data.append("instructor", instructor);
+
         await axios({
             method: "post",
-            url: `http://127.0.0.1:8000/api/v0.1/admin/${api_path}`,
+            url: `http://127.0.0.1:8000/api/v0.1/admin/add_course`,
             data: data,
             headers: { Authorization: `Bearer${token}` },
         })
@@ -38,7 +39,7 @@ const AddCourse = ({api_path,route}) => {
 
                 if (response.status === 201) {
                     console.log("successful whatever");
-                    navigate(`/${route}`);
+                    navigate(`/admin/courses`);
                 }
 
             })
@@ -47,52 +48,57 @@ const AddCourse = ({api_path,route}) => {
             });
     };
 
+    const getinstructorsAPI = async () => {
+        try {
+
+            const results = await axios({
+                method: "get",
+                url: "http://127.0.0.1:8000/api/v0.1/admin/all_instructors",
+                headers: { Authorization: `Bearer${token}` },
+            });
+            const data = await results.data.instructors;
+            console.log(data);
+            return data;
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    getinstructorsAPI();
+
     //When the cancel button is clicked
     const cancelInputs = (e) => {
         e.preventDefault();
-        setName('');
-        setEmail('');
-        setUsername('');
-        setPassword('');
-        setConfPassword('');
+        setCRN('');
+        setCourseName('');
     };
 
     return (
-        <form onSubmit={submitUser} className="registration-form">
-            <label htmlFor="name">Name <span className="red">*</span></label>
-            <input type="text" name="name" id="name" required="required" placeholder="Enter the name"
+        <form onSubmit={submitCourse} className="registration-form">
+            <label htmlFor="crn">CRN <span className="red">*</span></label>
+            <input type="text" name="crn" id="crn" required="required" placeholder="Enter course crn"
                 onChange={(e) => {
-                    setName(e.target.value);
+                    setCRN(e.target.value);
                 }}
-                value={name} />
+                value={crn} />
 
-            <label htmlFor="email">Email <span className="red">*</span></label>
-            <input type="text" name="email" id="email" required="required" placeholder="Enter the email"
+            <label htmlFor="course_name">Course Name <span className="red">*</span></label>
+            <input type="text" name="course_name" id="course_name" required="required" placeholder="Enter course name"
                 onChange={(e) => {
-                    setEmail(e.target.value);
+                    setCourseName(e.target.value);
                 }}
-                value={email} />
+                value={course_name} />
 
-            <label htmlFor="username">Username <span className="red">*</span></label>
-            <input type="text" name="username" id="username" required="required" placeholder="Enter the username"
-                onChange={(e) => {
-                    setUsername(e.target.value);
+            <label for="instructors">Assign to an instructor:</label>
+            <select name="instructors" id="instructors" placeholder="whatt? it worked" onChange={(e) => {
+                    setInstructor(e.target.value);
                 }}
-                value={username} />
-
-            <label htmlFor="password">Password <span className="red">*</span></label>
-            <input type="password" name="password" id="password" required="required" placeholder="Enter the password"
-                onChange={(e) => {
-                    setPassword(e.target.value);
-                }}
-                value={password} />
-
-            <label htmlFor="confirm_password">Confirm Password<span className="red">*</span></label>
-            <input type="password" name="confirm_password" id="confirm_password" required="required" placeholder="Confirm password"
-                onChange={(e) => {
-                    setConfPassword(e.target.value);
-                }}
-                value={confirm_password} />
+                value={instructor}>
+                    <option selected="true" disabled="disabled">Assign to an instructor</option>
+            {instructors.map((instructor) => (
+                    <option>{instructor.name}</option>
+            ))}
+            </select>
 
             <div className="action-btns">
                 <button type="submit" className="green-background">Submit</button>
