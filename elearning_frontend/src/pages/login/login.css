@@ -34,7 +34,7 @@ section {
     border-radius: 20px;
 }
 
-form {
+.login-page>section>form {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -44,7 +44,8 @@ form {
 
 
 input[type="text"],
-input[type="password"] {
+input[type="password"],
+input[type="date"] {
     font-family: 'Nunito', sans-serif;
     font-size: 15px;
     padding: 0.25rem;
@@ -57,7 +58,7 @@ button {
     margin-top: 16px;
 }
 
-button {
+.login-page>section>form>button {
     padding: 0.5rem;
     background-color: #3FCC7E;
     color: white;

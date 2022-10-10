@@ -2,7 +2,7 @@ import Sidebar from "../../components/sidebar/Sidebar";
 import Title from "../../components/header/Title";
 import './admindash.css';
 import Footer from "../../components/footer/Footer";
-import TableInstructors from "../../components/table/TableInstructors";
+import Register from "../../components/register-form/Register";
 
 const AdminAddInstructor = () => {
     return (
@@ -13,8 +13,7 @@ const AdminAddInstructor = () => {
                 
                 <div className="table-container">
                     <div className="table-title">Basic information</div>
-                    {/* <TableInstructors/> */}
-                    FORM
+                    <Register date_action={"Joining Date "}/>
                 </div>
                 <Footer/>
             </div> 
