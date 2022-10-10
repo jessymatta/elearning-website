@@ -56,7 +56,7 @@ function Login() {
                     // eslint-disable-next-line default-case
                     switch (user_type) {
                         case "admin":
-                            navigate("/admin/dashboard");
+                            navigate("/admin");
                             break;
                         case "instructor":
                             navigate("/instructor/dashboard");
