@@ -2,7 +2,7 @@ import Sidebar from "../../components/sidebar/Sidebar";
 import Title from "../../components/header/Title";
 import './admindash.css';
 import Footer from "../../components/footer/Footer";
-import TableStudents from "../../components/table/TableStudents";
+import TableCourses from "../../components/table/TableCourses";
 
 const AdminDashboardCourses = () => {
     return (
@@ -13,8 +13,7 @@ const AdminDashboardCourses = () => {
                 
                 <div className="table-container">
                     <div className="table-title">All Courses</div>
-                    {/* <TableStudents/> */}
-                    YUP
+                    <TableCourses/>
                 </div>
                 <Footer/>
             </div> 
