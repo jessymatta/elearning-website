@@ -11,18 +11,28 @@ function App() {
   return (
     <div className='App'>
       <BrowserRouter>
-      <Routes>
-        {/* Route of the login page*/}
-        <Route path="/" element={<Login />}></Route>
-        {/* Route for admins dashboard */}
-        <Route path="/admin/dashboard" element={<AdminDashboardInstructors />}></Route>
-        <Route path="/admin/dashboard/students" element={<AdminDashboardStudents/>}></Route>
-        {/* Route for instructors dashboard */}
-        <Route path="/instructor/dashboard" element={<InstructorDashboard />}></Route>
-        {/* Route for students dashboard */}
-        <Route path="/students/dashboard" element={<StudentDashboard />}></Route>
-      </Routes>
-        {/* <Login /> */}
+        <Routes>
+
+          <Route path="/">
+
+            <Route index element={<Login />} />
+
+            <Route path="admin">
+              <Route index element={<AdminDashboardInstructors />} />
+              <Route path="students" element={<AdminDashboardStudents />} />
+            </Route>
+
+            <Route path="instructor">
+              <Route index element={<InstructorDashboard />} />
+            </Route>
+
+            <Route path="student">
+              <Route index element={<StudentDashboard />} />
+            </Route>
+
+          </Route>
+        </Routes>
+
       </BrowserRouter>
     </div>
   );
