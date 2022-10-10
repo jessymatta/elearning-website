@@ -35,8 +35,7 @@ const TableStudents = () => {
     }
 
     function deleteStudent(id){
-        console.log("okk now what?");
-        console.log("this "+id);
+        // console.log("this "+id);
     }
 
     return (
