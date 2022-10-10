@@ -34,9 +34,13 @@ const TableStudents = () => {
         }
     }
 
+    function deleteStudent(id){
+        console.log("okk now what?");
+        console.log("this "+id);
+    }
+
     return (
         <div className='table'>
-            {/* <div>{JSON.stringify(students)}</div> */}
             <table>
                 <thead>
                     <tr>
@@ -55,7 +59,7 @@ const TableStudents = () => {
                             <td>{student.name}</td>
                             <td>{student.email}</td>
                             <td>{(student.created_at).split('T')[0]}</td>
-                            <td><FontAwesomeIcon className="edit-icon" icon={faPen}/><FontAwesomeIcon className="delete-icon gray" icon={faTrash}/></td>
+                            <td><FontAwesomeIcon className="edit-icon" icon={faPen}/><FontAwesomeIcon onClick={deleteStudent(student._id)} className="delete-icon gray" icon={faTrash}/></td>
                         </tr>
                     ))}
                 </tbody>
