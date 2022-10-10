@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import Login from './pages/login/Login';
 import InstructorDashboard from './pages/instructor/InstructorDashboard';
 import StudentDashboard from './pages/student/StudentDashboard';
