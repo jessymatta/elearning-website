@@ -5,7 +5,7 @@ const Table = () => {
 
     const token=localStorage.getItem('token');
     console.log("--------- "+token);
-    function getAllInstructors() {
+    function getAllStudents() {
         axios({
             method: "get",
             url: "http://127.0.0.1:8000/api/v0.1/admin/all_students",
@@ -17,7 +17,7 @@ const Table = () => {
             console.log(error.message);
         });
     }
-    getAllInstructors();
+    getAllStudents();
     return (
         <div className='table'>
             <table>
