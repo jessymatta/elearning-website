@@ -13,7 +13,7 @@ const AdminAddInstructor = () => {
                 
                 <div className="table-container">
                     <div className="table-title">Basic information</div>
-                    <Register date_action={"Joining Date "}/>
+                    <Register />
                 </div>
                 <Footer/>
             </div> 
