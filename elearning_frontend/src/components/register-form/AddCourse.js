@@ -35,10 +35,8 @@ const AddCourse = () => {
             headers: { Authorization: `Bearer${token}` },
         })
             .then(function (response) {
-                console.log(response.status);
 
                 if (response.status === 201) {
-                    console.log("successful whatever");
                     navigate(`/admin/courses`);
                 }
 
@@ -57,7 +55,6 @@ const AddCourse = () => {
                 headers: { Authorization: `Bearer${token}` },
             });
             const data = await results.data.instructors;
-            console.log(data);
             return data;
         } catch (error) {
             console.log(error);
