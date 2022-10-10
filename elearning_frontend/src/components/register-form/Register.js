@@ -20,6 +20,10 @@ const Register = () => {
         data.append("name", name);
         data.append("username", username);
         data.append("email", email);
+        if(password.length<6){
+            console.log("password should have at least 6 characters");
+            return;
+        }
         data.append("password", password);
         data.append("password_confirmation", confirm_password);
 
