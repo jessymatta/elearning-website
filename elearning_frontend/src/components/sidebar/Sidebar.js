@@ -32,7 +32,9 @@ const Sidebar = () => {
                     <Link class="default-link" to="/admin/courses">
                     <li><span>All Courses</span></li>
                     </Link>
+                    <Link class="default-link" to="/admin/add_course">
                     <li><span>Add Course</span></li>
+                    </Link>
                 </ul>
             </div>
 
