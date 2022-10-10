@@ -29,7 +29,7 @@ const Sidebar = () => {
                 </ul>
             </div>
 
-            <div className='bottom'><FontAwesomeIcon className="sidebar-icon btm-icon" icon={faArrowRightFromBracket} />logout</div>
+            <div className='bottom nav-title'><FontAwesomeIcon className="sidebar-icon btm-icon" icon={faArrowRightFromBracket} />LOGOUT</div>
         </div>
     )
 }
