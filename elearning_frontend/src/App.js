@@ -7,6 +7,7 @@ import AdminDashboardStudents from './pages/admin/AdminDashboardStudents';
 import AdminAddInstructor from './pages/admin/AdminAddInstructor';
 import AdminAddStudent from './pages/admin/AdminAddStudent';
 import AdminDashboardCourses from './pages/admin/AdminDashboardCourses';
+import AdminAddCourse from './pages/admin/AdminAddCourse';
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
               <Route path="courses" element={<AdminDashboardCourses />} />
               <Route path="add_instructor" element={<AdminAddInstructor/>} />
               <Route path="add_student" element={<AdminAddStudent/>} />
+              <Route path="add_course" element={<AdminAddCourse/>} />
             </Route>
 
             <Route path="instructor">
