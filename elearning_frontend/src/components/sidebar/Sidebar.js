@@ -5,8 +5,16 @@ import { faUsers } from "@fortawesome/free-solid-svg-icons";
 import { faBook } from "@fortawesome/free-solid-svg-icons";
 import { faArrowRightFromBracket } from "@fortawesome/free-solid-svg-icons";
 import { Link } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 const Sidebar = () => {
+    const navigate = useNavigate();
+    const logout = () =>{
+        localStorage.clear();
+        navigate("/")
+
+    }
+
     return (
         <div className='admin-sidebar'>
             <div className='top'>
@@ -38,7 +46,7 @@ const Sidebar = () => {
                 </ul>
             </div>
 
-            <div className='bottom nav-title'><FontAwesomeIcon className="sidebar-icon btm-icon" icon={faArrowRightFromBracket} />LOGOUT</div>
+            <div onClick={logout} className='bottom nav-title'><FontAwesomeIcon className="sidebar-icon btm-icon" icon={faArrowRightFromBracket} />LOGOUT</div>
         </div>
     )
 }
