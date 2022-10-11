@@ -14,7 +14,6 @@ class AssignmentController extends Controller
     //A method that will add a new assignment
     public function addAssignment(Request $request)
     {
-        $instructor_name = Auth::user();
 
         $validator = Validator::make($request->all(), [
             'course_name' => 'required|string',
@@ -30,7 +29,6 @@ class AssignmentController extends Controller
             "course_name" => $request->course_name,
             "description" => $request->description,
             "due_date" => $request->due_date,
-            "course_instructor" => $instructor_name,
         ]);
 
         return response()->json([
@@ -38,5 +36,11 @@ class AssignmentController extends Controller
             'status' => "success",
             'assignment' => $assignment
         ], 201);
+    }
+
+    //A method that will get all assignments of the logged in instructor
+    public function getAllAssignments()
+    {
+
     }
 }
