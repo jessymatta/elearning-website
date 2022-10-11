@@ -13,7 +13,7 @@ const AdminAddInstructor = () => {
                 
                 <div className="table-container">
                     <div className="table-title">Basic information</div>
-                    <Register api_path={"register_instructor"} route={"admin"}/>
+                    <Register api_path={"register_instructor"} route={"admin"} role={"admin"}/>
                 </div>
                 <Footer/>
             </div> 
