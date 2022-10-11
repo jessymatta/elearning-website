@@ -14,6 +14,7 @@ return new class extends Migration
             $table->string('course_name');
             $table->string('description');
             $table->string('due_date');
+            $table->string('course_instructor');
             $table->timestamps();
         });
     }
