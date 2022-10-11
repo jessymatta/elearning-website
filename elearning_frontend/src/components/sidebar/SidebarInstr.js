@@ -37,7 +37,7 @@ const SidebarInstr = () => {
                     </Link>
 
                     <p class="nav-title"><FontAwesomeIcon className="sidebar-icon" icon={faFileCircleCheck} />ASSIGNMENTS</p>
-                    <Link class="default-link" to=""><li><span>All Assignments</span></li></Link>
+                    <Link class="default-link" to="/instructor/all_assignments"><li><span>All Assignments</span></li></Link>
                     <Link class="default-link" to=""><li><span>Add Assignment</span></li></Link>
 
                     <p class="nav-title"><FontAwesomeIcon className="sidebar-icon" icon={faBullhorn} />ANNOUNCEMENTS</p>
