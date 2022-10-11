@@ -1,0 +1,88 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 22px;
+}
+
+h1 {
+    font-size: 35px;
+}
+
+.login-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem 0.5rem;
+    background-color: #EAF4EF;
+}
+
+section {
+    width: 100%;
+    max-width: 420px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.login-page>section>form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-grow: 1;
+    padding-bottom: 1rem;
+}
+
+
+input[type="text"],
+input[type="password"],
+input[type="date"],select {
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    padding: 0.25rem;
+    border-radius: 0.5rem;
+    height: 50px;
+}
+
+label,
+button {
+    margin-top: 16px;
+}
+
+.login-page>section>form>button {
+    padding: 0.5rem;
+    background-color: #3FCC7E;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 0.5rem;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+/* Login success page */
+.check-mark {
+    color: #3FCC7E;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+.success-login {
+    margin:0 auto;
+    width:500px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30vh;
+    align-items: center;
+}

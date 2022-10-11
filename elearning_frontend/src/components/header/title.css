@@ -1,0 +1,8 @@
+.title{
+    background-color: #3FCC7E;
+    height:80px;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left:30px;
+}

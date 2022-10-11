@@ -1,0 +1,93 @@
+.admin-sidebar {
+    background-color: #222C3C;
+    flex: 1;
+    min-height: 100vh;
+    color: white;
+    position: relative;
+}
+
+.green{
+    color: #3FCC7E;
+}
+
+.top {
+    color: white;
+    height:90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.role{
+    font-weight:normal;
+    margin-top: 10px;
+}
+
+.center {
+    padding-left: 20px;
+}
+
+.center>ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.center >ul>li>span{
+    font-size: 18px;
+    font-weight: 100;
+    
+}
+
+.center>ul>li{
+    display: flex;
+    align-items: center;
+    margin-left: 50px ;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+.center>ul>li:hover{
+    color: #3FCC7E;
+}
+
+.nav-title{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 5px;
+
+}
+
+.sidebar-icon{
+    margin-right: 10px;
+}
+
+
+.bottom {
+    position: absolute;
+    bottom: 0;
+    padding-left: 20px;
+    margin-bottom: 60px;
+    cursor: pointer;
+}
+
+.bottom:hover, .btm-icon:hover{
+    color: #3FCC7E;
+}
+
+.default-link{
+    text-decoration: none;
+    color: white;
+    width: fit-content;
+    height: fit-content;
+}
+
+.default-link:hover{
+    color:#3FCC7E;
+}
