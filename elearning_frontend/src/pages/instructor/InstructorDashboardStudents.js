@@ -8,7 +8,7 @@ const InstructorDashboardStudents = () => {
     return (
         <div class="admin-dash">
             <SidebarInstr/>
-            <div className="dash-container">
+            <div className="dash-container smaller">
                 <Title title={"Students List"}/>
                 
                 <div className="table-container">
