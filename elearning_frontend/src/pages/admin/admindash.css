@@ -8,7 +8,9 @@
     flex: 6;
     position: relative;
 }
-
+.smaller{
+    flex:5;
+}
 .table-container{
     background-color: white;
     border-radius: 10px;
