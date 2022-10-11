@@ -30,9 +30,6 @@ class CourseController extends Controller
             "instructor_id" => $instructor_id
         ]);
 
-        echo(gettype($request->instructor));
-        echo($request->instructor);
-
         return response()->json([
             'message'=>'Course successfully registered',
             'status'=>"success",
