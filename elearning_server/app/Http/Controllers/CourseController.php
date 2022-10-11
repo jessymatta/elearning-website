@@ -71,5 +71,14 @@ class CourseController extends Controller
         ], 200);
 
     }
+
+
+    public function getInstructorCourses($instr_id){
+        $instr_courses = Course::where("instructor_id",$instr_id)->get();
+        return response()->json([
+            "status" => "success",
+            "instructor_courses" => $instr_courses
+        ], 200);
+    }
     
 }
