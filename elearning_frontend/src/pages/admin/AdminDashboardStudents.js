@@ -13,7 +13,7 @@ const AdminDashboardStudents = () => {
                 
                 <div className="table-container">
                     <div className="table-title">All instructors</div>
-                    <TableStudents/>
+                    <TableStudents role={"admin"}/>
                 </div>
                 <Footer/>
             </div> 
