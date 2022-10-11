@@ -6,6 +6,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\InstructorController;
 use App\Http\Controllers\CourseController;
+use App\Http\Controllers\AssignmentController;
 
 Route::group(['prefix' => 'v0.1'], function () {
 
@@ -32,6 +33,7 @@ Route::group(['prefix' => 'v0.1'], function () {
             Route::post('/register_student', [AuthController::class, 'registerStudent'])->name('register-student');
             Route::get('/all_students', [StudentController::class, 'getAllStudents'])->name('all-students');
             Route::post('/update_student/{student_id}', [StudentController::class, 'updateStudent'])->name('update-student');
+            Route::post('/add_assignment', [AssignmentController::class, 'addAssignment'])->name('add-assignment');
         });
     });
 
