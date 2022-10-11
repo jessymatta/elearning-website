@@ -8,6 +8,7 @@ import AdminAddInstructor from './pages/admin/AdminAddInstructor';
 import AdminAddStudent from './pages/admin/AdminAddStudent';
 import AdminDashboardCourses from './pages/admin/AdminDashboardCourses';
 import AdminAddCourse from './pages/admin/AdminAddCourse';
+import InstructorDashboardStudents from './pages/instructor/InstructorDashboard';
 
 function App() {
 
@@ -30,7 +31,7 @@ function App() {
             </Route>
 
             <Route path="instructor">
-              <Route index element={<InstructorDashboard />} />
+              <Route index element={<InstructorDashboardStudents />} />
             </Route>
 
             <Route path="student">
