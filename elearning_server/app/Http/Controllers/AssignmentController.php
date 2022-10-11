@@ -46,6 +46,11 @@ class AssignmentController extends Controller
     //A method that will get all assignments of the logged in instructor
     public function getAllAssignments()
     {
-
+        $instructor_assignments = Auth::user()->assignments;
+        return response()->json([
+            "status"=>"success",
+            'message'=>'Retrieved all instructors assignments',
+            "instructor_assignments"=>$instructor_assignments
+        ]);
     }
 }
