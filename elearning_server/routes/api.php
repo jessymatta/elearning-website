@@ -34,7 +34,7 @@ Route::group(['prefix' => 'v0.1'], function () {
             Route::get('/all_students', [StudentController::class, 'getAllStudents'])->name('all-students');
             Route::post('/update_student/{student_id}', [StudentController::class, 'updateStudent'])->name('update-student');
             Route::post('/add_assignment', [AssignmentController::class, 'addAssignment'])->name('add-assignment');
-        });
+        });Route::get('/all_assignments', [AssignmentController::class, 'getAllAssignments'])->name('all-assignments');
     });
 
     //Students routes
