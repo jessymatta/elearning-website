@@ -48,7 +48,7 @@ const TableInstructors = () => {
                 <tbody>
                     {instructors.map((student) => (
                         <tr>
-                            <td>{student._id}</td>
+                            <td>{student.uni_id}</td>
                             <td>{student.name}</td>
                             <td>{student.email}</td>
                             <td>{(student.created_at).split('T')[0]}</td>
