@@ -1,5 +1,5 @@
 import Login from './pages/login/Login';
-import InstructorDashboard from './pages/instructor/InstructorDashboard';
+import InstructorDashboard from './pages/instructor/InstructorDashboardStudents';
 import StudentDashboard from './pages/student/StudentDashboard';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AdminDashboardInstructors from './pages/admin/AdminDashboardInstructors';
@@ -8,7 +8,7 @@ import AdminAddInstructor from './pages/admin/AdminAddInstructor';
 import AdminAddStudent from './pages/admin/AdminAddStudent';
 import AdminDashboardCourses from './pages/admin/AdminDashboardCourses';
 import AdminAddCourse from './pages/admin/AdminAddCourse';
-import InstructorDashboardStudents from './pages/instructor/InstructorDashboard';
+import InstructorDashboardStudents from './pages/instructor/InstructorDashboardStudents';
 
 function App() {
 
