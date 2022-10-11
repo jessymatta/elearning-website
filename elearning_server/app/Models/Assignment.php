@@ -12,5 +12,6 @@ class Assignment extends Authenticatable
         'course_name',
         'description',
         'due_date',
+        'course_instructor'
     ];
 }
