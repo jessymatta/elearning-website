@@ -1,8 +1,8 @@
 import './sidebar.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFiles } from "@fortawesome/free-solid-svg-icons";
+import { faBullhorn } from "@fortawesome/free-solid-svg-icons";
 import { faUsers } from "@fortawesome/free-solid-svg-icons";
-import { faBook } from "@fortawesome/free-solid-svg-icons";
+import { faFileCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import { faArrowRightFromBracket } from "@fortawesome/free-solid-svg-icons";
 import { Link } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
@@ -36,11 +36,11 @@ const SidebarInstr = () => {
                         <li><span>Add Student</span></li>
                     </Link>
 
-                    <p class="nav-title"><FontAwesomeIcon className="sidebar-icon" icon={faBook} />ASSIGNMENTS</p>
+                    <p class="nav-title"><FontAwesomeIcon className="sidebar-icon" icon={faFileCircleCheck} />ASSIGNMENTS</p>
                     <Link class="default-link" to="/admin"><li><span>All Assignments</span></li></Link>
                     <Link class="default-link" to="/admin/add_instructor"><li><span>Add Assignment</span></li></Link>
 
-                    <p class="nav-title"><FontAwesomeIcon className="sidebar-icon" icon={faFiles} />ANNOUNCEMENTS</p>
+                    <p class="nav-title"><FontAwesomeIcon className="sidebar-icon" icon={faBullhorn} />ANNOUNCEMENTS</p>
                     <Link class="default-link" to="/admin/courses">
                         <li><span>All Announcements</span></li>
                     </Link>
