@@ -1,34 +1,43 @@
-.red{
+.red {
     color: red;
 }
 
-.registration-form{
+.registration-form {
     display: flex;
     flex-direction: column;
-    padding-left:20%;
-    padding-right:20%;
-    padding-bottom: 3%;;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-bottom: 3%;
+    ;
 }
 
-.registration-form>.action-btns>button{
+.registration-form>.action-btns>button {
     padding: 0.5rem;
     color: white;
     font-size: 20px;
     font-weight: 600;
     border-radius: 0.5rem;
-    border:none;
-    width:130px;
+    border: none;
+    width: 130px;
     margin-top: 30px;
     cursor: pointer;
 }
 
-.margin-left{
+.margin-left {
     margin-left: 30px;
 }
 
-.green-background{
+.green-background {
     background-color: #3FCC7E;
 }
-.red-background{
+
+.red-background {
     background-color: #FC6363;
+}
+
+.textarea {
+    height: 200px;
+    border-radius: 0.5rem;
+    margin-top: 4px;
+    padding: 0.5rem;
 }

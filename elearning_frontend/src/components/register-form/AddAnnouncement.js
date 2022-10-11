@@ -82,8 +82,8 @@ const AddAnnouncement = () => {
                 ))}
             </select>
 
-            <label htmlFor="content">content <span className="red">*</span></label>
-            <input type="text" name="content" id="content" required="required" placeholder="Enter content"
+            <label htmlFor="content">Announcement Content <span className="red">*</span></label>
+            <textarea class="textarea" type="text" name="content" id="content" required="required" placeholder="Enter content"
                 onChange={(e) => {
                     setContent(e.target.value);
                 }}
