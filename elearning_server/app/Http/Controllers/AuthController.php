@@ -79,13 +79,16 @@ class AuthController extends Controller
         if ($validator->fails()) {
             return response()->json($validator->errors()->toJson(), 400);
         }
+        // Custom university ID
+        $uni_id =  date('Y')."0".User::count()."34" ;
 
         $user = User::create([
             'name' => $request->name,
             "email" => $request->email,
             "username" => $request->username,
             "user_type"=> "student",
-            "password" => bcrypt($request->password)
+            "password" => bcrypt($request->password),
+            'uni_id' => $uni_id
 
         ]);
 
