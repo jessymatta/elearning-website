@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPen } from "@fortawesome/free-solid-svg-icons";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
-const TableStudents = () => {
+const TableStudents = ({role}) => {
 
     const token = localStorage.getItem('token');
     const [students, setStudents] = useState([]);
@@ -24,7 +24,7 @@ const TableStudents = () => {
 
             const results = await axios({
                 method: "get",
-                url: "http://127.0.0.1:8000/api/v0.1/admin/all_students",
+                url: `http://127.0.0.1:8000/api/v0.1/${role}/all_students`,
                 headers: { Authorization: `Bearer${token}` },
             });
             const data = await results.data.students;
