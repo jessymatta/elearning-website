@@ -13,7 +13,7 @@ const InstructorAddStudent = () => {
                 
                 <div className="table-container">
                     <div className="table-title">Basic information</div>
-                    <Register api_path={"register_student"} route={"instructor/students"} role={"instructor"}/>
+                    <Register api_path={"register_student"} route={"instructor"} role={"instructor"}/>
                 </div>
                 <Footer/>
             </div> 
