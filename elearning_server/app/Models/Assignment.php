@@ -9,7 +9,7 @@ class Assignment extends Authenticatable
 {
     use HasFactory;
     protected $fillable = [
-        'course_name',
+        'crn',
         'description',
         'due_date',
     ];
