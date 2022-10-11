@@ -23,15 +23,11 @@ class CourseController extends Controller
         $instructor_name = explode(",",$request->instructor)[0];
         $instructor_id = explode(",",$request->instructor)[1];
 
-        echo"\n";
-        echo("instructor_name ".$instructor_name);
-        echo("instructor_id ".$instructor_id);
-        echo"\n";
-
         $course = Course::create([
             "crn" => $request->crn,
             "course_name" => $request->course_name,
             "instructor_name" => $instructor_name,
+            "instructor_id" => $instructor_id
         ]);
 
         echo(gettype($request->instructor));
