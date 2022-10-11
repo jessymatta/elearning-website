@@ -13,7 +13,7 @@ const AdminAddStudent = () => {
                 
                 <div className="table-container">
                     <div className="table-title">Basic information</div>
-                    <Register api_path={"register_student"} route={"admin/students"}/>
+                    <Register api_path={"register_student"} route={"admin/students"} role={"admin"}/>
                 </div>
                 <Footer/>
             </div> 

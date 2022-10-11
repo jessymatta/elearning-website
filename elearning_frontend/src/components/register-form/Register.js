@@ -3,7 +3,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const Register = ({api_path,route}) => {
+const Register = ({api_path,route, role}) => {
 
     const token = localStorage.getItem('token');
     const [name, setName] = useState("");
@@ -29,7 +29,7 @@ const Register = ({api_path,route}) => {
         // register_instructor
         await axios({
             method: "post",
-            url: `http://127.0.0.1:8000/api/v0.1/admin/${api_path}`,
+            url: `http://127.0.0.1:8000/api/v0.1/${role}/${api_path}`,
             data: data,
             headers: { Authorization: `Bearer${token}` },
         })
