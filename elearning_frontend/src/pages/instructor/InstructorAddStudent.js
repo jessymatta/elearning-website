@@ -1,5 +1,5 @@
 import Title from "../../components/header/Title";
-import './admindash.css';
+import '../admin/admindash.css';
 import Footer from "../../components/footer/Footer";
 import Register from "../../components/register-form/Register";
 import SidebarInstr from "../../components/sidebar/SidebarInstr";
