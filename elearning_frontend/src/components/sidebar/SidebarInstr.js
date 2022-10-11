@@ -41,7 +41,7 @@ const SidebarInstr = () => {
                     <Link class="default-link" to="/instructor/add_assignment"><li><span>Add Assignment</span></li></Link>
 
                     <p class="nav-title"><FontAwesomeIcon className="sidebar-icon" icon={faBullhorn} />ANNOUNCEMENTS</p>
-                    <Link class="default-link" to="">
+                    <Link class="default-link" to="/instructor/all_announcements">
                         <li><span>All Announcements</span></li>
                     </Link>
                     <Link class="default-link" to="/instructor/add_announcements">

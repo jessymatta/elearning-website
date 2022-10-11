@@ -8,8 +8,7 @@ const AddAnnouncement = () => {
     const token = localStorage.getItem('token');
     const user_id = localStorage.getItem('id');;
     const [crn, setCRN] = useState("");
-    const [description, setDescription] = useState("");
-    const [due_date, setDueDate] = useState("");
+    const [content, setContent] = useState("");
     const navigate = useNavigate();
     const [courses_crn, setCourseCRN] = useState([]);
 
@@ -26,19 +25,18 @@ const AddAnnouncement = () => {
         e.preventDefault();
         let data = new FormData();
         data.append("crn", crn);
-        data.append("description", description);
-        data.append("due_date", due_date);
+        data.append("content", content);
 
         await axios({
             method: "post",
-            url: `http://127.0.0.1:8000/api/v0.1/instructor/add_assignment`,
+            url: `http://127.0.0.1:8000/api/v0.1/instructor/add_announcement`,
             data: data,
             headers: { Authorization: `Bearer${token}` },
         })
             .then(function (response) {
 
                 if (response.status === 201) {
-                    navigate(`/instructor/all_assignments`);
+                    navigate(`/instructor/all_announcements`);
                 }
 
             })
@@ -65,7 +63,7 @@ const AddAnnouncement = () => {
     //When the cancel button is clicked
     const cancelInputs = (e) => {
         e.preventDefault();
-        setDescription('');
+        setContent('');
     };
 
     return (
@@ -84,20 +82,12 @@ const AddAnnouncement = () => {
                 ))}
             </select>
 
-            <label htmlFor="description">Description <span className="red">*</span></label>
-            <input type="text" name="description" id="description" required="required" placeholder="Enter description"
+            <label htmlFor="content">content <span className="red">*</span></label>
+            <input type="text" name="content" id="content" required="required" placeholder="Enter content"
                 onChange={(e) => {
-                    setDescription(e.target.value);
+                    setContent(e.target.value);
                 }}
-                value={description} />
-
-
-            <label htmlFor="due_date">Due Date <span className="red">*</span></label>
-            <input type="date" name="due_date" id="due_date" required="required"
-                onChange={(e) => {
-                    setDueDate(e.target.value);
-                }}
-                value={due_date} />
+                value={content} />
 
             <div className="action-btns">
                 <button type="submit" className="green-background">Submit</button>

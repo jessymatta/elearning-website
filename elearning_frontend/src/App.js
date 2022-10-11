@@ -1,5 +1,4 @@
 import Login from './pages/login/Login';
-import InstructorDashboard from './pages/instructor/InstructorDashboardStudents';
 import StudentDashboard from './pages/student/StudentDashboard';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AdminDashboardInstructors from './pages/admin/AdminDashboardInstructors';
@@ -13,6 +12,7 @@ import InstructorAddStudent from './pages/instructor/InstructorAddStudent';
 import InstructorAllAssign from './pages/instructor/InstructorAllAssign';
 import InstructorAddAssign from './pages/instructor/InstructorAddAssign';
 import InstructorAllAnnoun from './pages/instructor/InstructorAllAnnoun';
+import InstructorAddAnnouncement from './pages/instructor/InstructorAddAnnounc';
 
 function App() {
 
@@ -39,7 +39,10 @@ function App() {
               <Route path="add_student" element={<InstructorAddStudent/>} />
               <Route path="all_assignments" element={<InstructorAllAssign/>} />
               <Route path="add_assignment" element={<InstructorAddAssign/>} />
-              <Route path="add_announcements" element={<InstructorAllAnnoun/>} />
+
+              <Route path="all_announcements" element={<InstructorAllAnnoun/>} />
+
+              <Route path="add_announcements" element={<InstructorAddAnnouncement/>} />
             </Route>
 
             <Route path="student">
