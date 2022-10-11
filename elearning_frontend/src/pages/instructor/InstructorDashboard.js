@@ -12,7 +12,7 @@ const InstructorDashboardStudents = () => {
                 <Title title={"Students List"}/>
                 
                 <div className="table-container">
-                    <div className="table-title">All instructors</div>
+                    <div className="table-title">All Students</div>
                     <TableStudents/>
                 </div>
                 <Footer/>
