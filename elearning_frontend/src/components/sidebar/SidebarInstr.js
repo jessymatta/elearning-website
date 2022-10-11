@@ -12,10 +12,10 @@ const SidebarInstr = () => {
     const logout = () => {
         localStorage.clear();
         navigate("/")
-
     }
-    const user = localStorage.getItem('user');
-    const username = user.username;
+    const user = JSON.parse(localStorage.getItem('user'));
+    const username = user["username"];
+
     return (
 
         <div className='admin-sidebar'>
