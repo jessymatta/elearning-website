@@ -94,17 +94,6 @@ const AddAssignment = () => {
                 }}
                 value={due_date} />
 
-            {/* <label for="instructors">Assign to an instructor:</label>
-            <select name="instructors" id="instructors" placeholder="whatt? it worked" onChange={(e) => {
-                    setCourseDescription(e.target.value);
-                }}
-                value={instructor}>
-                    <option selected="true" disabled="disabled">Assign to an instructor</option>
-            {instructors.map((instructor) => (
-                    <option>{instructor.name}</option>
-            ))}
-            </select> */}
-
             <div className="action-btns">
                 <button type="submit" className="green-background">Submit</button>
                 <button  className="red-background margin-left">Cancel</button>
