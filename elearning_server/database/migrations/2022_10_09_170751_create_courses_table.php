@@ -13,7 +13,8 @@ return new class extends Migration
             $table->id();
             $table->string('crn')->unique();
             $table->string('course_name');
-            $table->string('instructor')->nullable();
+            $table->string('instructor_name')->nullable();
+            $table->string('instructor_id')->nullable();
             $table->timestamps();
         });
     }
