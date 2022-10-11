@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 const AddAssignment = () => {
 
     const token = localStorage.getItem('token');
-    const [course_name, setCourseName] = useState("");
+    const [crn, setCRN] = useState("");
     const [description, setDescription] = useState("");
     const [due_date, setDueDate] = useState("");
     const navigate = useNavigate();
@@ -24,7 +24,7 @@ const AddAssignment = () => {
     const submitCourse = async (e) => {
         e.preventDefault();
         let data = new FormData();
-        data.append("course_name", course_name);
+        data.append("crn", crn);
         data.append("description", description);
         data.append("due_date", due_date);
 
@@ -72,12 +72,12 @@ const AddAssignment = () => {
 
     return (
         <form onSubmit={submitCourse} className="registration-form">
-            <label htmlFor="course_name">Course CRN <span className="red">*</span></label>
-            <input type="text" name="course_name" id="course_name" required="required" placeholder="Enter course crn"
+            <label htmlFor="crn">Course CRN <span className="red">*</span></label>
+            <input type="text" name="crn" id="crn" required="required" placeholder="Enter course crn"
                 onChange={(e) => {
-                    setCourseName(e.target.value);
+                    setCRN(e.target.value);
                 }}
-                value={course_name} />
+                value={crn} />
 
             <label htmlFor="description">Description <span className="red">*</span></label>
             <input type="text" name="description" id="description" required="required" placeholder="Enter description"

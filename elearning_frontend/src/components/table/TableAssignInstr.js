@@ -51,7 +51,7 @@ const TableAssignInstr = () => {
                 <tbody>
                     {assignments.map((assignment) => (
                         <tr key={assignment._id}>
-                            <td>{assignment.course_name}</td>
+                            <td>{assignment.crn}</td>
                             <td>{assignment.description}</td>
                             <td>{assignment.due_date}</td>
                             <td>{(assignment.created_at).split('T')[0]}</td>
