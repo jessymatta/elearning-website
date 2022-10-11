@@ -20,11 +20,22 @@ class CourseController extends Controller
             return response()->json($validator->errors()->toJson(), 400);
         }
 
+        $instructor_name = explode(",",$request->instructor)[0];
+        $instructor_id = explode(",",$request->instructor)[1];
+
+        echo"\n";
+        echo("instructor_name ".$instructor_name);
+        echo("instructor_id ".$instructor_id);
+        echo"\n";
+
         $course = Course::create([
             "crn" => $request->crn,
             "course_name" => $request->course_name,
-            "instructor" => $request->instructor,
+            "instructor_name" => $instructor_name,
         ]);
+
+        echo(gettype($request->instructor));
+        echo($request->instructor);
 
         return response()->json([
             'message'=>'Course successfully registered',

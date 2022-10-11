@@ -53,7 +53,7 @@ const TableCourses = () => {
                         <tr key={student._id}>
                             <td>{student.crn}</td>
                             <td>{student.course_name}</td>
-                            <td>{student.instructor}</td>
+                            <td>{student.instructor_name}</td>
                             <td>{(student.created_at).split('T')[0]}</td>
                             <td><FontAwesomeIcon className="edit-icon" icon={faPen}/><FontAwesomeIcon className="delete-icon gray" icon={faTrash}/></td>
                         </tr>
