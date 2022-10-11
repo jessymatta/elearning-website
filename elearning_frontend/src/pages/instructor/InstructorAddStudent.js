@@ -4,7 +4,7 @@ import Footer from "../../components/footer/Footer";
 import Register from "../../components/register-form/Register";
 import SidebarInstr from "../../components/sidebar/SidebarInstr";
 
-const AdminAddStudent = () => {
+const InstructorAddStudent = () => {
     return (
         <div class="admin-dash">
             <SidebarInstr/>
@@ -21,4 +21,4 @@ const AdminAddStudent = () => {
     )
 }
 
-export default AdminAddStudent
+export default InstructorAddStudent
