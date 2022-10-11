@@ -37,4 +37,8 @@ class User extends Authenticatable implements JWTSubject
     {
         return [];
     }
+
+    public function assignments(){
+        return $this->hasMany(Assignment::class, 'instructor_id');
+    }
 }

@@ -13,4 +13,8 @@ class Assignment extends Authenticatable
         'description',
         'due_date',
     ];
+
+    public function instructor(){
+        return $this->belongsTo(Student::class);
+    }
 }
