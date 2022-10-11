@@ -12,6 +12,7 @@ class Course extends Authenticatable
     protected $fillable = [
         'crn',
         'course_name',
-        'instructor',
+        'instructor_name',
+        'instructor_id'
     ];
 }
