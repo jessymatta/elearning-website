@@ -72,7 +72,7 @@ const AddAssignment = () => {
 
     return (
         <form onSubmit={submitCourse} className="registration-form">
-            <label htmlFor="course_name">Course Name <span className="red">*</span></label>
+            <label htmlFor="course_name">Course CRN <span className="red">*</span></label>
             <input type="text" name="course_name" id="course_name" required="required" placeholder="Enter course crn"
                 onChange={(e) => {
                     setCourseName(e.target.value);

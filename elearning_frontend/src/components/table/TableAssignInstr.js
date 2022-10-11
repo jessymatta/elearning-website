@@ -40,7 +40,7 @@ const TableAssignInstr = () => {
             <table>
                 <thead>
                     <tr>
-                        <th>Course Name</th>
+                        <th>Course CRN</th>
                         <th>Description</th>
                         <th>Due Date</th>
                         <th>Created At</th>
