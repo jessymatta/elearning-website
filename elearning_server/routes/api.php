@@ -7,6 +7,7 @@ use App\Http\Controllers\StudentController;
 use App\Http\Controllers\InstructorController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\AssignmentController;
+use App\Http\Controllers\AnnouncementController;
 
 Route::group(['prefix' => 'v0.1'], function () {
 
@@ -36,6 +37,7 @@ Route::group(['prefix' => 'v0.1'], function () {
             Route::post('/add_assignment', [AssignmentController::class, 'addAssignment'])->name('add-assignment');
             Route::get('/all_assignments', [AssignmentController::class, 'getAllAssignments'])->name('all-assignments');
             Route::get('/instr_courses/{id}', [CourseController::class, 'getInstructorCourses'])->name('instr-courses');
+            Route::get('/all_announcements', [AnnouncementController::class, 'addAnnouncement'])->name('add-announcement');
         });
     });
 
