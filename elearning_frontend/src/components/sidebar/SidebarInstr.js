@@ -32,7 +32,7 @@ const SidebarInstr = () => {
                     <Link class="default-link" to="/instructor">
                         <li><span>All Students</span></li>
                     </Link>
-                    <Link class="default-link" to="">
+                    <Link class="default-link" to="/instructor/add_student">
                         <li><span>Add Student</span></li>
                     </Link>
 
