@@ -38,6 +38,7 @@ Route::group(['prefix' => 'v0.1'], function () {
             Route::get('/all_assignments', [AssignmentController::class, 'getAllAssignments'])->name('all-assignments');
             Route::get('/instr_courses/{id}', [CourseController::class, 'getInstructorCourses'])->name('instr-courses');
             Route::get('/all_announcements', [AnnouncementController::class, 'addAnnouncement'])->name('add-announcement');
+            Route::get('/instr_announ/{id}', [AnnouncementController::class, 'getAllAnnouncements'])->name('instr-announ');
         });
     });
 

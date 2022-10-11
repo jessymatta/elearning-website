@@ -41,4 +41,15 @@ class AnnouncementController extends Controller
         ], 201);
     }
 
+    //A method that will get all announcements of the logged in instructor
+    public function getAllAnnouncements()
+    {
+        $instructor_announcements = Auth::user()->announcements;
+        return response()->json([
+            "status"=>"success",
+            'message'=>'Retrieved all instructors announcements',
+            "instructor_announcements"=>$instructor_announcements
+        ]);
+    }
+
 }
