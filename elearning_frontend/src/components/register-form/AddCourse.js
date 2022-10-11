@@ -87,13 +87,13 @@ const AddCourse = () => {
                 value={course_name} />
 
             <label for="instructors">Assign to an instructor:</label>
-            <select name="instructors" id="instructors" placeholder="whatt? it worked" onChange={(e) => {
+            <select name="instructors" id="instructors" onChange={(e) => {
                     setInstructor(e.target.value);
                 }}
                 value={instructor}>
                     <option selected="true" disabled="disabled">Assign to an instructor</option>
             {instructors.map((instructor) => (
-                    <option>{instructor.name}</option>
+                    <option value={[instructor.name, instructor._id]}>{instructor.name}</option>
             ))}
             </select>
 
