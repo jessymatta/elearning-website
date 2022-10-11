@@ -18,7 +18,7 @@ class AssignmentController extends Controller
         $instructor = Auth::user();
 
         $validator = Validator::make($request->all(), [
-            'course_name' => 'required|string',
+            'crn' => 'required|string',
             'description' => 'required|string',
             'due_date' => 'required|string',
         ]);
@@ -29,7 +29,7 @@ class AssignmentController extends Controller
 
 
         $assignment = Assignment::create([
-            "course_name" => $request->course_name,
+            "crn" => $request->crn,
             "description" => $request->description,
             "due_date" => $request->due_date,
         ]);
