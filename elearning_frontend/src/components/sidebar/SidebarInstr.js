@@ -44,7 +44,7 @@ const SidebarInstr = () => {
                     <Link class="default-link" to="">
                         <li><span>All Announcements</span></li>
                     </Link>
-                    <Link class="default-link" to="">
+                    <Link class="default-link" to="/instructor/add_announcements">
                         <li><span>Add Announcement</span></li>
                     </Link>
                 </ul>

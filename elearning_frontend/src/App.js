@@ -12,6 +12,7 @@ import InstructorDashboardStudents from './pages/instructor/InstructorDashboardS
 import InstructorAddStudent from './pages/instructor/InstructorAddStudent';
 import InstructorAllAssign from './pages/instructor/InstructorAllAssign';
 import InstructorAddAssign from './pages/instructor/InstructorAddAssign';
+import InstructorAllAnnoun from './pages/instructor/InstructorAllAnnoun';
 
 function App() {
 
@@ -38,6 +39,7 @@ function App() {
               <Route path="add_student" element={<InstructorAddStudent/>} />
               <Route path="all_assignments" element={<InstructorAllAssign/>} />
               <Route path="add_assignment" element={<InstructorAddAssign/>} />
+              <Route path="add_announcements" element={<InstructorAllAnnoun/>} />
             </Route>
 
             <Route path="student">
